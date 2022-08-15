@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js assignment</title>
+   
+    
+</head>
+<body>
+    <script>function click(){
+        let x = document.getElementById("name").value
+        let y = document.getElementById("password").value
+        let z = document.getElementById("message")
+        if(x === null){
+            z.textContent = "Username cannot be empty...";
+            z.style.backgroundColor = "red";
+            return 0;
+        }
+        else if(x.length > 15){
+            z.textContent = " username cannot be too long...";
+            z.style.backgroundColor = "red";
+            return 0;
+        }
+        if(y.length<6){
+            z.textContent = "* password cannot be empty...";
+            z.style.backgroundColor = "red";
+            return 0;
+        }
+        
+    
+    } </script>  
+    <h1 style="text-align: center; ">sign up form</h1>
+    <label for="name">username</label>
+    <input type="text" id="name" ><br><br>
+    <label for="password">password</label>
+    <input  type="password" name="password" id="password" ><br><br>
+    <p id = "message"></p>
+    <input type = "button" value = 'submit' onclick="click()">
+  
+</body>
+</html>
